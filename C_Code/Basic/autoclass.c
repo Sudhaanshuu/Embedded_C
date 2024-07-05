@@ -1,5 +1,5 @@
 #include<STDIO.H>
-//? program for the checking which variable is accessable
+//? C program for the checking which variable is accessable
 
 void suku(){
     printf("Love You ");
