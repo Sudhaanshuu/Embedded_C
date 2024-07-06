@@ -1,39 +1,33 @@
-#include<STDIO.H>
-// ? C program for the Find and delete the duplicate element in the Arrays
+#include <stdio.h>
 
-int main(int argc, char const *argv[])
-{
-    int su[]={1,2,3,2,2,4};
-int k;
-    for (int i = 0; i < 6; i++)
-    {
-        k=su[i];
-        for (int j = 0; j < 6; j++)
-        {
-            if (j==i)
-            {
-                continue;
-            }else{
-                if (k==su[j]){
-                for (int p = j; p < 5; p++){
-                su[p]=su[p+1];
-                    }   
+// C program to find and delete duplicate elements in the array
 
+int main(int argc, char const *argv[]) {
+    int n;
+    printf("Enter the array's size: ");
+    scanf("%d", &n);
+    int su[n];
+
+    for (int i = 0; i < n; i++) {
+        printf("Enter element at %dth index: ", i);
+        scanf("%d", &su[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (su[i] == su[j]) {
+                for (int p = j; p < n - 1; p++) {
+                    su[p] = su[p + 1];
+                }
+                n--;
+                j--;
             }
-            }
-            
-            
-            
         }
-        
     }
 
-    for (int i = 0; i < 6; i++)
-    {
-       printf("%d ",su[i]);
+    for (int i = 0; i < n; i++) {
+        printf("%d ", su[i]);
     }
     
-    
-
     return 0;
 }
