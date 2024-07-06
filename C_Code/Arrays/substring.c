@@ -1,28 +1,28 @@
-#include<STDIO.H>
-// * C Program to find the sub string   
-int main(int argc, char const *argv[])
-{
-    char su[100];
-    printf("Enter the String ");
-    scanf("%[^\n]%*c",&su);
-    printf("%s",su);
+#include <stdio.h>
+#include <string.h>
 
-    char t[]={1,4,6,4,3};
-    
-    
-for (int i = 0; i < 100; i++)
-{
-   if (su[i]==t[0])
-   {
-    if (su[i+1]==t[1])
-    {
-        printf("FOund");
-        break;
+// C Program to find the substring
+int main(int argc, char const *argv[]) {
+    char su[100];
+    printf("Enter the string: ");
+    scanf("%[^\n]%*c", su); // Removed & to correctly read the string
+    printf("%s\n", su);
+
+    char t[] = "substring"; // Changed the test substring to a valid string for searching
+
+    int found = 0; // Variable to track if the substring is found
+
+    for (int i = 0; i < strlen(su); i++) {
+        if (strncmp(&su[i], t, strlen(t)) == 0) { // Use strncmp to compare substring
+            printf("Found\n");
+            found = 1;
+            break;
+        }
     }
-    
-   }
-   printf("Not found");
-}
+
+    if (!found) {
+        printf("Not found\n");
+    }
 
     return 0;
 }
