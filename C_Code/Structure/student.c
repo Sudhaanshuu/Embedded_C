@@ -12,7 +12,7 @@ int main() {
     printf("Enter the number of students: ");
     scanf("%d", &n);
 
-    struct Student students[n];
+    struct Student students[20];
 
     for (i = 0; i < n; i++) {
         printf("Enter details for student %d\n", i + 1);
