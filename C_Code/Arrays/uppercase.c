@@ -1,24 +1,19 @@
-#include<STDIO.H>
-// C Program for the covert Lowercase to upper case
-int main(int argc, char const *argv[])
-{
-    printf("Enter the Word");
-    char su[4];
-    scanf("%[^\n]%*c",&su);
+#include <stdio.h>
+#include <ctype.h> 
 
-    for (int i = 0; i < 4; i++)
-    {
-         if(su[i]>96)
-    {
-        su[i]=su[i]-32;
-        
+// C Program to convert lowercase to uppercase
+int main(int argc, char const *argv[]) {
+    printf("Enter the word: ");
+    char su[100]; 
+    scanf("%s", su); 
 
+    for (int i = 0; su[i] != '\0'; i++) {
+        if (islower(su[i])) {
+            su[i] = toupper(su[i]);
+        }
     }
-    printf("%c",su[i]);
-    }
-    
-    
 
+    printf("Uppercase word: %s\n", su);
 
     return 0;
 }
