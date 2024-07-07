@@ -1,4 +1,4 @@
-// & CProgram for the Inventory Management System
+// & C Program for the Inventory Management System
 #include <stdio.h>
 
 struct Product {
