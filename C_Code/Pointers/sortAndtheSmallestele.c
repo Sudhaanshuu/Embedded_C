@@ -1,4 +1,5 @@
 #include<STDIO.H>
+// ! C program to find the smallest and lasgers after sorting
 void suLast(int s, int *suku){
 for (int i = 0; i < s; i++)
 {
