@@ -13,7 +13,7 @@ void SuSort(int n, int *a) {
     }
 }
 
-int main(int argc, char const *argv[]) {
+int main() {
     int s = 4;
     int suku[] = {1, 3, 2, 0};
 
