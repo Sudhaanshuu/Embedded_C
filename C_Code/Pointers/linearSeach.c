@@ -9,7 +9,7 @@ int main() {
 
     for (int i = 0; i < 5; i++) {
         if (suku[i] == *p) {
-            printf("Element found at index %d\n", i);
+            printf("Element found at index %d \n", i);
             found = 1;
             break;
         }
