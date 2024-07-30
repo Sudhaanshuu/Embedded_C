@@ -1,0 +1,2 @@
+../Src/gpio.c:3:6:gpio_init	1
+../Src/gpio.c:22:6:delay_ms	3

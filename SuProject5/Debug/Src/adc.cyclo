@@ -1,0 +1,3 @@
+../Src/adc.c:3:6:pc9_adc_init	1
+../Src/adc.c:17:6:start_con	1
+../Src/adc.c:21:10:adc_read	2
